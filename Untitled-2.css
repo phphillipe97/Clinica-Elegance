@@ -1,24 +1,26 @@
 /* Reset básico */
 * {
     margin: 0;
-    padding: 500;
+    padding: 0;
     box-sizing: border-box;
+
 }
 
+/* Body */
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f4f4f4;
     color: #333;
 }
 
-/* Estilos Gerais da Logo */
+/* Logo */
 .logo {
     text-align: center;
     font-family: 'Roboto', sans-serif;
     display: flex;
     flex-direction: column;
-    justify-content: end;
-    align-items: normal;
+    justify-content: center;
+    align-items: center;
     width: 100%;
 }
 
@@ -42,21 +44,21 @@ body {
     /* Maior espaço entre o nome e a linha inferior */
 }
 
-/* Nome da Marca */
 .brand-name {
-    font-size: 40px;
+    font-size: 28px;
+    /* Ajuste de tamanho para dispositivos pequenos */
     font-weight: 800;
     color: #436081;
-    letter-spacing: 8px;
+    letter-spacing: 6px;
     text-transform: uppercase;
 }
 
-/* Subtítulo */
 .subtitle {
-    font-size: 18px;
+    font-size: 14px;
+    /* Subtítulo menor */
     color: #A0A0A0;
     font-weight: 700;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     text-transform: capitalize;
     font-family: 'Roboto', sans-serif;
 }
@@ -91,21 +93,22 @@ nav ul {
     padding: 0;
     margin: 0;
     display: flex;
-    justify-content: center;
-    /* Alinha os itens no centro */
+    flex-direction: column;
+    /* Menu em coluna em dispositivos móveis */
     align-items: center;
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 10px 0;
 }
 
 nav ul li a {
     text-decoration: none;
     color: #6f6666;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: bold;
-    padding: 12px 60px;
+    padding: 12px 30px;
+    /* Menor padding */
     display: inline-block;
     transition: background-color 0.3s, color 0.3s;
 }
@@ -115,22 +118,23 @@ nav ul li a:hover {
     background-color: #f1bdbd;
     color: #6f6666;
     border-radius: 15px;
-
 }
 
+/* Banner */
 .banner {
     background-image: url('imagens/banner_teste_2.png');
-    /* Substitua pela URL da sua imagem */
     background-size: cover;
     background-position: center;
-    height: 380px;
+    height: 50vh;
+    /* Ajusta o banner para uma altura relativa */
     color: white;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    font-size: 2px;
+    font-size: 2rem;
+    /* Tamanho ajustado */
     font-weight: bold;
 }
 
@@ -171,20 +175,22 @@ h2 {
     color: #666;
 }
 
+/* Footer */
 footer {
     background-color: #1e2a47;
     color: white;
-    padding: 30px 15px;
+    padding: 20px 15px;
+    /* Menor padding */
     text-align: center;
 }
 
 footer h2 {
-    font-size: 26px;
+    font-size: 20px;
     margin-bottom: 10px;
 }
 
 footer p {
-    font-size: 16px;
+    font-size: 14px;
     margin: 5px 0;
 }
 
@@ -195,6 +201,75 @@ footer a {
 
 footer a:hover {
     color: #e63e75;
+}
+
+/* Media query para dispositivos maiores (tablets e desktops) */
+@media (min-width: 768px) {
+    .logo {
+        flex-direction: row;
+        /* Organiza a logo e o subtítulo em linha */
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .brand-name {
+        font-size: 40px;
+        /* Aumenta o tamanho da fonte no desktop */
+        letter-spacing: 10px;
+        /* Aumenta o espaçamento das letras */
+    }
+
+    .subtitle {
+        font-size: 18px;
+        /* Aumenta o tamanho da fonte no desktop */
+    }
+
+    nav ul {
+        flex-direction: row;
+        /* Menu em linha no desktop */
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin: 0 15px;
+    }
+
+    nav ul li a {
+        font-size: 18px;
+        /* Aumenta o tamanho da fonte no menu */
+        padding: 12px 30px;
+        /* Ajusta o padding */
+    }
+
+    .banner {
+        height: 380px;
+        /* Altura fixa para o banner no desktop */
+        font-size: 3rem;
+        /* Aumenta o tamanho da fonte */
+    }
+
+    footer h2 {
+        font-size: 22px;
+        /* Ajuste de fonte maior */
+    }
+
+    footer p {
+        font-size: 16px;
+    }
+
+    .procedimentos-lista {
+        grid-template-columns: repeat(3, 1fr);
+        /* 3 colunas no desktop */
+    }
+
+    .instagram-icon,
+    .whatsapp-icon {
+        font-size: 60px;
+        /* Ícones maiores */
+        left: 20px;
+        /* Ajuste da posição dos ícones */
+    }
 }
 
 /* Responsividade */
