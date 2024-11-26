@@ -21,7 +21,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 80%;
+    width: 50%;
 }
 
 /* Linhas tracejadas (superior e inferior) */
